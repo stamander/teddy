@@ -1,0 +1,57 @@
+@import "front";
+@import "Morden";
+
+
+
+.header{
+
+  color: black;
+  font-family: fantasy;
+  width: 1440px;
+
+  display: flex;
+  font-size: 30px;
+  text-decoration: none;
+
+
+}
+
+.home{
+  margin: 30px;
+}
+
+.shopping{
+  margin: 30px;
+}
+
+.link{
+  margin: 30px;
+}
+.private{
+  margin: 30px;
+}
+
+.shop_image{
+
+  width: 1440px;
+  height: 600px;
+  position: relative;
+}
+
+.slide{
+  position: absolute;
+  width: 1000px;
+  height: 560px;
+
+  margin: 10px 200px;
+  text-align: center;
+}
+
+.explain{
+  width: 1000px;
+  height: 560px;
+  text-align: center;
+
+
+  margin: 10px 200px;
+}
