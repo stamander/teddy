@@ -2,7 +2,7 @@ class ShoppingController < ApplicationController
   def index
   end
 
-  def
+  def create
 
   def new
     @shopping = Shopping.new
