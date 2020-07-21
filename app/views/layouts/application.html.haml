@@ -12,9 +12,9 @@
       .home 
         = link_to 'home',root_path
       .shopping
-        = link_to 'shopping', "#"
+        = link_to 'shopping',shopping_index_path
       .link 
-        = link_to 'access', "#"
+        = link_to 'access', access_index_path	
       .private 
-        = link_to 'private(staff only)',"#"
+        = link_to 'private(staff only)',private_index_path
     = yield

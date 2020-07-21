@@ -27,6 +27,11 @@ class ShoppingController < ApplicationController
 
   end
 
+
+  def purchase
+    @shopping = Shopping.find_by(id:params[:id])
+  end
+
   private
   def shop_params
     params.require(:shopping).permit(:name,:price,:explain,:number,images_attributes: [:src]) 

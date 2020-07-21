@@ -1,0 +1,22 @@
+
+.itemsBox_show
+  .items_show
+    .image_show
+      =image_tag("#{@shopping.images.first.src}")
+
+    .name_show
+      
+      = "商品名:#{@shopping.name }"
+    .price_show
+      = "価格:¥#{@shopping.price}(送料税込)"
+    .explains_show
+      = "説明:#{@shopping.explain}"
+    .number_show
+      = "商品番号:#{@shopping.number}"
+
+    .areat
+      ※商品決済後、お届け先住所等のお客様情報のご入力となります
+  .a
+  = form_tag(action: :pay, method: :post) do
+    :plain
+    %script{type: "text/javascript", src: "https://checkout.pay.jp", class:"payjp-button", "data-text": "購入する", "data-key": "pk_test_6c62395ff5328b141cf685a4"}
