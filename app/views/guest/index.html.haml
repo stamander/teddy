@@ -1,0 +1,6 @@
+
+- @guests.each  do |shopper| 
+  .guets_shopper
+    = "お客様名#{shopper.name},かな#{shopper.kana }電話番号#{shopper.phone_number}  メールアドレス#{shopper.mail}郵便番号#{shopper.adress_number}お届け先#{shopper.adress}商品番号#{shopper.number}"
+  .sakujyo
+    = link_to "削除",guest_path(shopper),method: :delete,data:{confirm: "削除しますか？"}

@@ -1,0 +1,43 @@
+
+
+
+.flash
+  =flash[:denger]
+
+
+.form
+  = form_for @guest,url: guest_index_path do |f|
+
+    .name_guest
+      お名前
+      = f.text_field :name,placeholder:"ex 山田　太郎"
+    .kana_guest
+      カナ
+      = f.text_field :kana, placeholder: "ex ヤマダ　タロウ"
+    .phone_number_guest
+      電話番号
+      = f.text_field :phone_number,placeholder:"ex 080-1234-5678"
+    .mail_guest
+      メールアドレス
+      = f.text_field :mail, placeholder:"ex sarai@gmail.com"
+    .adress_number_guest
+      郵便番号
+      = f.text_field :adress_number, placeholder:"ex 321-1234"
+    .adress_guest
+      お届け先住所
+      = f.text_field :adress,placeholder:"ex 栃木県　足利市　堀込町9-3-44 マンション名　１０２"
+
+    .number
+      商品番号
+      = f.text_field :number,placeholder:"ex 2番"
+
+    =f.submit "確定する",data:{confirm: "お間違いはないですか？"},class: "send"
+     
+
+
+
+  
+     
+
+
+

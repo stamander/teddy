@@ -1,0 +1,83 @@
+.form{
+  margin: 20px 100px;
+
+  font-size: 30px;
+}
+
+#guest_name{
+  margin: 30px;
+ 
+  border: 1px solid;
+}
+#guest_kana{
+  margin: 30px;
+  border: 1px solid;
+}
+
+#guest_mail{
+  margin: 30px;
+  border: 1px solid;
+}
+
+#guest_phone_number{
+  margin: 30px;
+  border: 1px solid;
+}
+
+#guest_adress_number{
+  margin: 30px;
+  border: 1px solid;
+}
+
+
+#guest_adress{
+  margin: 30px;
+  width: 800px;
+  border: 1px solid;
+}
+
+#guest_kana{
+  margin: 30px;
+  border: 1px solid;
+}
+#guest_number{
+  margin: 30px;
+  border: 1px solid;
+}
+
+
+.send{
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 12px;   /* 余白       */
+  background    : #0f0f13;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+  border        : 2px solid #babac0;    /* 枠の指定 */
+}
+.send:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  color         : #06060a;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+
+
+.flash{
+  font-size: 40px;
+  background-color: orange;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.guets_shopper{
+  margin: 10px;
+  font-size: 25px;
+}
