@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  root to: "front#index"
+  root to: "shopping#index"
   resources :front,only:[:index]
+  resources :shopping
 
 
 end

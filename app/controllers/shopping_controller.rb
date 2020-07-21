@@ -1,5 +1,6 @@
 class ShoppingController < ApplicationController
   def index
+    @shopping = Shopping.includes(:images)
   end
 
   def create
@@ -9,7 +10,7 @@ class ShoppingController < ApplicationController
     else
       redirect_to new_shopping_path
     end
-    
+
   end
 
 
@@ -18,6 +19,19 @@ class ShoppingController < ApplicationController
     @shopping = Shopping.new
     @images = Images.new
   end
+
+
+  def show
+
+    @shopping = Shopping.find_by(id:params[:id])
+
+  end
+
+  private
+  def shop_params
+    params.require(:shopping).permit(:name,:price,:explain,:number,images_attributes: [:src]) 
+  end
+
 
 
 end

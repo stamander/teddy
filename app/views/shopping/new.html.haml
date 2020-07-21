@@ -1,0 +1,19 @@
+= form_for @shopping,url: shopping_index_path do |f|
+  .name 
+    商品名
+    = f.text_field :name 
+  .price
+    値段
+    = f.text_field :price
+  .explains
+    商品説明
+    = f.text_field :explain
+  .number
+    商品番号
+    = f.text_field :number
+  .images
+
+    = f.fields_for :images do |i| 
+      = i.file_field :src 
+    
+  = f.submit "確定する",class:"send" 
