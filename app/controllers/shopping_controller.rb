@@ -32,6 +32,19 @@ class ShoppingController < ApplicationController
     @shopping = Shopping.find_by(id:params[:id])
   end
 
+
+
+  def pay
+    @shopping = Shopping.find(params[:id])
+    Payjp.api_key =  Rails.application.credentials.payjp[:secret_key]
+    charge = Payjp::Charge.create(
+    amount: @shopping.price,
+    card: params['payjp-token'],
+    currency: 'jpy'
+    )
+    redirect_to  done_shopping_index_path
+  end
+
   private
   def shop_params
     params.require(:shopping).permit(:name,:price,:explain,:number,images_attributes: [:src]) 
