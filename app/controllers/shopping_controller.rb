@@ -5,7 +5,7 @@ class ShoppingController < ApplicationController
 
   def create
     @shopping = Shopping.new(shop_params)
-    if @shopping.sava
+    if @shopping.save
       redirect_to shopping_index_path
     else
       redirect_to new_shopping_path
@@ -17,7 +17,7 @@ class ShoppingController < ApplicationController
 
   def new
     @shopping = Shopping.new
-    @images = Images.new
+    @shopping.images.new
   end
 
 

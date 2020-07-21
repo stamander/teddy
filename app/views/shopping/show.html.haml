@@ -1,0 +1,21 @@
+.itemsBox_show
+  .items_show
+    .image_show
+      =image_tag("#{@shopping.images.first.src}")
+
+    .name_show
+      
+      = "商品名:#{@shopping.name }"
+    .price_show
+      = "価格:¥#{@shopping.price}(送料税込)"
+    .explains_show
+      = "説明:#{@shopping.explain}"
+    .number_show
+      = "商品番号:#{@shopping.number}"
+    .areat
+      購入の際,商品番号を入力していただきますので、お控えをお願いいたします。
+
+
+    .buy
+      -# =link_to '購入画面へ', purchase_shopping_index_path,data:{confirm: "商品番号は控えましたか？お客様自身に不備があった場合、当店は責任を一切おいかねますのでご了承ください"},class:"send"
+

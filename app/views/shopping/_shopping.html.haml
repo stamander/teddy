@@ -1,0 +1,18 @@
+.items
+  - @shopping.each do |member|
+    .item
+        
+
+      .image
+        = image_tag("#{member.images.first.src}")
+      .name
+        ="商品名:#{member.name}"
+      %br
+      .price
+        ="値段:¥#{member.price}(送料税込)"
+      %br
+
+      .explains
+        ="商品説明:#{member.explain}"
+      .shousai
+        = link_to "詳しく見る",shopping_path(member.id)
