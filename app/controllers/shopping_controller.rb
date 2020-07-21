@@ -3,6 +3,9 @@ class ShoppingController < ApplicationController
   end
 
   def create
+  end
+
+  
 
   def new
     @shopping = Shopping.new
