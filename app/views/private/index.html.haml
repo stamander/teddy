@@ -4,3 +4,10 @@
 
 .guests
   = link_to 'お客様情報確認',guest_index_path
+
+
+.guests
+  - if user_signed_in?
+    = link_to 'ログアウト',destroy_user_session 
+  - else
+    = link_to 'ログイン',new_user_registration_path

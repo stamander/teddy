@@ -28,6 +28,26 @@ class ShoppingController < ApplicationController
   end
 
 
+
+  def destroy
+    @shopping = Shopping.find_by(id:params[:id])
+    @shopping.destroy
+    redirect_to shopping_index_path
+
+
+  end
+
+
+  def edit
+    @shopping = Shopping.find_by(id: params[:id])
+  end
+  def update
+    @shopping = Shopping.find_by(id: params[:id])
+    @shopping.update(shop_params)
+    redirect_to shopping_index_path,notice: '商品を編集しました'
+  end
+
+
   def purchase
     @shopping = Shopping.find_by(id:params[:id])
   end

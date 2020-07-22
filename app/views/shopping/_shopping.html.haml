@@ -16,3 +16,11 @@
         ="商品説明:#{member.explain}"
       .shousai
         = link_to "詳しく見る",shopping_path(member.id)
+
+
+      - if user_signed_in?
+        .sakujyo
+
+          = link_to "削除",shopping_path(member),method: :delete
+        .edit
+          = link_to "編集",edit_shopping_path(member.id)
