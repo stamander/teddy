@@ -57,7 +57,7 @@ class ShoppingController < ApplicationController
 
   def pay
     @shopping = Shopping.find(params[:id])
-    Payjp.api_key =  ENV['sk_key_']
+    Payjp.api_key =  ENV['sk_key']
     charge = Payjp::Charge.create(
     amount: @shopping.price,
     card: params['payjp-token'],
