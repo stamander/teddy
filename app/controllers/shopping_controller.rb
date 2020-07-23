@@ -74,7 +74,7 @@ class ShoppingController < ApplicationController
 
   def basic
     authenticate_or_request_with_http_basic do |username, password|
-      username == ENV['ENV_BASIC_AUTH_USERNAMES'] && password ==  ENV['ENV_BASIC_AUTH_PASSWORDS'] 
+      username == ENV['BASIC_AUTH_USERNAMES'] && password ==  ENV['BASIC_AUTH_PASSWORDS'] 
     end
   end
 
