@@ -1,6 +1,6 @@
 class ShoppingController < ApplicationController
   def index
-    basic
+    # basic
     @shopping = Shopping.includes(:images)
   end
 
