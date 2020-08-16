@@ -13,9 +13,10 @@
       %br
 
       .explains
-        ="商品説明:#{member.explain}"
+        ="#{member.explain}"
+      %br
       .shousai
-        = link_to "詳しく見る",shopping_path(member.id)
+        = link_to "詳しく見る",shopping_path(member.id),class:"shosaiz"
 
 
       - if user_signed_in?

@@ -2,15 +2,20 @@
   .name 
     商品名
     = f.text_field :name 
+  %br
   .price
     値段
     = f.text_field :price
+  %br
   .explains
     商品説明
     = f.text_field :explain
+  %br
   .number
     商品番号
+    %br
     = f.text_field :number
+  %br
   .images
 
     = f.fields_for :images do |i| 
